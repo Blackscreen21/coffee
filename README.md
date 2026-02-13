@@ -9,9 +9,15 @@ If you are as nerdy about coffee as I am the following situation may feel famili
 I am honestly a little sick of constantly googling or looking up the ratio in one of James Hoffmann's books.
 <br>
 Thus I will build a node.js & angular application with following must-haves:
+
 + Default ratios for different methods of brewing
 + Ability to alter ratios
 + Simple UI
-
+  
+<br>
 Currently I also am flirting with the idea of having default recepies in general but also being able to store grind sizes, ratios etc. for specific beans, as these can be entirely different from bag to bag (in cheap coffee even from bean to bean)
+
+***
+
+I am aware apps like these exist already but they dont excell in design and as Linus Torvalds once said "The […] philosophy is 'Laugh in the face of danger'. Oops. Wrong One. 'Do it yourself'. Yes, that's it."
 
