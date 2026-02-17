@@ -1,0 +1,18 @@
+<div class="card">
+  <h2>{{ coffeeType }} Brewing Calculator</h2>
+
+<label>
+  Water Volume (ml):
+  <input
+    type="number"
+    [value]="waterVolume()"
+    (input)="onInput($any($event.target).valueAsNumber)"
+  >
+</label>
+
+@if (coffeeGrams() > 0) {
+  <div>You need {{ coffeeGrams() | number:'1.1-2' }} g of coffee.</div>
+} @else {
+  <div>Enter a water volume to calculate coffee grams.</div>
+}
+</div>

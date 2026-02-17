@@ -1,0 +1,27 @@
+<app-brewing-form
+  [coffeeType]="'V60'"
+  [ratio]="16.667"
+  (waterVolumeChange)="waterVolume.set($event)">
+</app-brewing-form>
+
+@if (waterVolume() > 0) {
+  <ul>
+    <li>0:00 : Approx. ~{{ waterVolume() * 0.2 | number:'1.0-0' }}g Bloom Pour</li>
+    <li>0:10 - 0:15 : Gentle Swirl</li>
+    <li>0:00 - 0:45 : Bloom</li>
+    <li>0:45 - 1:00 : Pour to ~{{ waterVolume() * 0.4 | number:'1.0-0' }}g Total</li>
+    <li>1:00 - 1:10 : Pause</li>
+    <li>1:10 - 1:20 : Pour to ~{{ waterVolume() * 0.6 | number:'1.0-0' }}g Total</li>
+    <li>1:20 - 1:30 : Pause</li>
+    <li>1:30 - 1:40 : Pour to ~{{ waterVolume() * 0.8 | number:'1.0-0' }}g Total</li>
+    <li>1:40 - 1:50 : Pause</li>
+    <li>1:50 - 2:00 : Pour to ~{{ waterVolume() }}g Total</li>
+    <li>2:00 : Gentle Swirl, Wait for drawdown to complete</li>
+  </ul>
+  <p>Drawdown should take approximately 3:00 but it depends on many variables </p>
+  <p>Adjust grindsize after taste:</p>
+  <ul>
+    <li>Too Fast/Acidic = Finer</li>
+    <li>Too Slow/Bitter = Coarser</li>
+  </ul>
+}
