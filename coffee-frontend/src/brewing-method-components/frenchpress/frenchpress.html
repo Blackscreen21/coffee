@@ -1,0 +1,17 @@
+<app-brewing-form
+  [coffeeType]="'Frenchpress'"
+  [ratio]="15.3846"
+  (waterVolumeChange)="waterVolume.set($event)">
+</app-brewing-form>
+
+@if (waterVolume() > 0) {
+  <ul>
+    <li>For French press brewing, use approximately {{waterVolume}} ml of water.</li>
+    <li>Heat the water to about 93°C.</li>
+    <li>Pour and Steep for 4 minutes.</li>
+    <li>Take large spoons and remove the crust of coffee ground afloat</li>
+    <li>Wait between 3-5 minutes (the longer the better => immersion)</li>
+    <li>Press until the mesh filter is on top of the liquid. NOT THE GROUNDS THEMSELF!.</li>
+    <li>Pour gently.</li>
+  </ul>
+}

@@ -16,4 +16,10 @@ export class HomeScreenComponent {
   goToKalita() {
     this.router.navigate(['/kalita']);
   }
+  goToFrenchPress() {
+    this.router.navigate(['/frenchpress']);
+  }
+  goToAeroPress(){
+    this.router.navigate(['/aeropress']);
+  }
 }

@@ -1,0 +1,31 @@
+<app-brewing-form
+  [coffeeType]="'Aeropress'"
+  [ratio]="16.667"
+  (waterVolumeChange)="waterVolume.set($event)">
+</app-brewing-form>
+@if (waterVolume() > 0) {
+
+<p>
+  1. Assemble Aeropress inverted. <br>
+  2. Add coffee, then pour water up to {{ waterVolume() }}. <br>
+  3. Stir gently for 10seconds. <br>
+  4. Let steep for 1min 30s. <br>
+  5. Attach filter cap, flip, and press gently over ~20s. <br>
+  Enjoy a clean, balanced cup of coffee!
+</p>
+}
+
+
+<app-brewing-form
+  [coffeeType]="'Cold Aeropress'"
+  [ratio]="13.33"
+  (waterVolumeChange)="coldWaterVolume.set($event)">
+</app-brewing-form>
+@if (coldWaterVolume() > 0) {
+  <p>
+      I am particulary fond of making my summer time coffee like this. <br/>
+      Just pour water into your inverted aeropress setup, some say it may explode, but i have never had that happen to me, ever.<br/>
+      <b>Steeping time is very important here: let it steep for 2-3 minutes</b> <br/>
+      Press through in one continous low pressure press. Enjoy!
+  </p>
+}
