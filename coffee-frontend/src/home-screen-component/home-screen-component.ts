@@ -13,4 +13,7 @@ export class HomeScreenComponent {
   goToV60() {
     this.router.navigate(['/v60']);
   }
+  goToKalita() {
+    this.router.navigate(['/kalita']);
+  }
 }

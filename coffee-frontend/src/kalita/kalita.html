@@ -1,0 +1,22 @@
+<app-brewing-form
+  [coffeeType]="'Kalita'"
+  [ratio]="16.667"
+  (waterVolumeChange)="waterVolume.set($event)">
+</app-brewing-form>
+@if (waterVolume() > 0) {
+  <ul>
+    <li>00:00 : Approx. ~{{ waterVolume() * 0.125 | number:'1.0-0' }}g Bloom Pour</li>
+    <li>00:30 : 6 Circles to ~{{ waterVolume() * 0.4 | number:'1.0-0' }}g Total</li>
+    <li>00:45 : 3 Circles to ~{{ waterVolume() * 0.55 | number:'1.0-0' }}g Total</li>
+    <li>01:00 : 3 Circles to ~{{ waterVolume() * 0.7 | number:'1.0-0' }}g Total</li>
+    <li>01:15 : 3 Circles to ~{{ waterVolume() *0.85 | number:'1.0-0' }}g Total</li>
+    <li>01:45 : 3 Circles to ~{{ waterVolume() | number:'1.0-0' }}g Total</li>
+  </ul>
+  <p>
+    Similar to the V60 the ratio is 60g per Litre. <br>
+    It is a flat-bottom brewer meaning things like swirling and agitation behave differently though.
+<br>
+    Interestingly enough there is no recipe for the Wave by James Hoffmann, so we went with Onyx Coffee Lab's.
+    Usually the default here is 400g of water.
+  </p>
+}

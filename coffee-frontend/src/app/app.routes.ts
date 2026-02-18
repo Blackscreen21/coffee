@@ -14,4 +14,10 @@ export const routes: Routes = [
     loadComponent: () =>
       import('../v60/v60').then((m) => m.V60),
   },
+  {
+    path: 'kalita',
+    loadComponent: () =>
+      import('../kalita/kalita').then((m) => m.Kalita),
+  },
+
 ];
