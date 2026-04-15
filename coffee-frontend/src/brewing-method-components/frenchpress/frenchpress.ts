@@ -4,7 +4,7 @@ import { BrewingForm } from '../../brewing-form/brewing-form';
 
 @Component({
   selector: 'app-frenchpress',
-  imports: [BrewingForm, DecimalPipe],
+  imports: [BrewingForm],
   templateUrl: './frenchpress.html',
   styleUrl: './frenchpress.css',
 })
